@@ -14,7 +14,7 @@ def main():
     # A travessia em ordem apresenta os valores do menor para o maior.
     print("=== ARVORE BINARIA DE BUSCA ===")
     print("Valores inseridos:", valores)
-    print("Valores em ordem crescente:", arvore.em_ordem())
+    print("Valores em ordem crescente:", arvore.em_ordem(arvore.raiz))
 
     # Compara a busca de um valor presente com outro que não foi inserido.
     print("O valor 7 existe?", arvore.buscar(7))
