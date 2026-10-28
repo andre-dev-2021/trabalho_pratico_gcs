@@ -57,6 +57,14 @@ class ArvoreBinaria:
             atual = atual.esquerda
         return atual.valor
 
+        def minimo(self):
+        """Retorna o menor valor armazenado na árvore."""
+        if self.raiz is None:
+            return None
+        atual = self.raiz
+        while atual.esquerda is not None:
+            atual = atual.esquerda
+        return atual.valor
         
         return (
             self.em_ordem(no.esquerda)
