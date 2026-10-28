@@ -42,12 +42,16 @@ class ArvoreBinaria:
 
         return False
 
-    def em_ordem(self, no=None):
+    def em_ordem(self, no):
         if no is None:
-            no = self.raiz
-            if no is None:
-                return []
-    
+            return []
+        
+        return (
+            self.em_ordem(no.esquerda)
+            + [no.valor]
+            + self.em_ordem(no.direita)
+        )
+
     def minimo(self):
         """Retorna o menor valor armazenado na árvore."""
         if self.raiz is None:
@@ -56,10 +60,3 @@ class ArvoreBinaria:
         while atual.esquerda is not None:
             atual = atual.esquerda
         return atual.valor
-
-        
-        return (
-            self.em_ordem(no.esquerda)
-            + [no.valor]
-            + self.em_ordem(no.direita)
-        )
