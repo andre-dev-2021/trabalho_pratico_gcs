@@ -14,7 +14,7 @@ def main():
     # Exibindo os valores
     print("=== ARVORE BINARIA DE BUSCA ===")
     print("Valores inseridos:", valores)
-    print("Valores em ordem crescente:", arvore.em_ordem())
+    print("Valores em ordem crescente:", arvore.em_ordem(arvore.raiz))
 
     # Testando a busca
     print("O valor 7 existe?", arvore.buscar(7))
